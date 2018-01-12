@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f6de0e2d-4450-4f5f-9b9a-9c86807e4564" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-01-11-browser-cache.html" afterPath="$PROJECT_DIR$/_posts/2018-01-11-browser-cache.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -236,7 +235,7 @@
       <updated>1515661050419</updated>
       <workItem from="1515661051633" duration="1445000" />
       <workItem from="1515662549657" duration="3801000" />
-      <workItem from="1515723159022" duration="3013000" />
+      <workItem from="1515723159022" duration="3083000" />
     </task>
     <task id="LOCAL-00001" summary="修改为md">
       <created>1515662313537</created>
@@ -245,11 +244,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515662313537</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改为md">
+      <created>1515726240944</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1515726240944</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8259000" />
+    <option name="totallyTimeSpent" value="8329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />

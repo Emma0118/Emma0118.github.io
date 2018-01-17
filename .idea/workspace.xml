@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6de0e2d-4450-4f5f-9b9a-9c86807e4564" name="Default" comment="修改为md">
+    <list default="true" id="f6de0e2d-4450-4f5f-9b9a-9c86807e4564" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +17,8 @@
       <file leaf-file-name="2018-01-11-browser-cache.markdown" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-01-11-browser-cache.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="19" column="205" lean-forward="true" selection-start-line="19" selection-start-column="205" selection-end-line="19" selection-end-column="205" />
+            <state relative-caret-position="841">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -229,7 +229,7 @@
       <workItem from="1515723159022" duration="5853000" />
       <workItem from="1515978401070" duration="1175000" />
       <workItem from="1516068340873" duration="1257000" />
-      <workItem from="1516153329275" duration="6704000" />
+      <workItem from="1516153329275" duration="6839000" />
     </task>
     <task id="LOCAL-00001" summary="修改为md">
       <created>1515662313537</created>
@@ -259,11 +259,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516174418873</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改为md">
+      <created>1516174425836</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1516174425836</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25644000" />
+    <option name="totallyTimeSpent" value="25779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -316,9 +323,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改为md" />
     <MESSAGE value="增加 强缓存 的参数说明" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加 强缓存 的参数说明" />
+    <MESSAGE value="修改为md" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改为md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -592,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-01-11-browser-cache.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="19" column="205" lean-forward="true" selection-start-line="19" selection-start-column="205" selection-end-line="19" selection-end-column="205" />
+        <state relative-caret-position="841">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -20,8 +20,8 @@
       <file leaf-file-name="2018-01-11-browser-cache.markdown" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-01-11-browser-cache.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="82" column="28" lean-forward="true" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
+            <state relative-caret-position="120">
+              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -230,7 +230,7 @@
       <workItem from="1516153329275" duration="7094000" />
       <workItem from="1516175923342" duration="3929000" />
       <workItem from="1516605019989" duration="10005000" />
-      <workItem from="1516626159102" duration="3958000" />
+      <workItem from="1516626159102" duration="4070000" />
     </task>
     <task id="LOCAL-00001" summary="修改为md">
       <created>1515662313537</created>
@@ -302,11 +302,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516629709172</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完结">
+      <created>1516630132967</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1516630132967</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44950000" />
+    <option name="totallyTimeSpent" value="45062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1021" extended-state="6" />
@@ -385,7 +392,8 @@
     <MESSAGE value="修改为md" />
     <MESSAGE value="增加 强缓存管理" />
     <MESSAGE value="增加 协商缓存" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加 协商缓存" />
+    <MESSAGE value="完结" />
+    <option name="LAST_COMMIT_MESSAGE" value="完结" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -720,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-01-11-browser-cache.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="82" column="28" lean-forward="true" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
+        <state relative-caret-position="120">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding />
         </state>
       </provider>

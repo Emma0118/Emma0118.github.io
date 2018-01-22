@@ -22,6 +22,26 @@ date: 2016-01-11 15:32:24.000000000 +09:00
 <p>2.浏览器在接收到资源后，会将资源和response header 一起缓存起来；</p>
 <p>3.当浏览器再次请求统一资源时，先从缓存中寻找，根据它第一次请求时间和Cache-control设定的有效期，计算出一个资源过期时间，再拿这个过期时间和当前请求时间比较，如果请求时间再过期时间之前，就命中缓存，否则就不行。</p>
 <p>4.如果缓存没有命中，浏览器直接从服务器加载资源时，Cache-control header 在重新加载时会被更新。</p>
+### 强缓存管理和设置</h3>
+一般可以使用2种方式来设置是有启用强缓存
+1. 通过代码的方式，在web服务器返回的响应中添加 Expires 和 Cache-Control Header;
+比如在PHP接口中，header('Cache-Control: max-age=3600*24');
+2. 通过配置web服务器的方式，让web服务器在响应资源的时候统一添加  Expires 和 Cache-Control Header;
+比如在nginx的config文件中，
+```bash
+1    # 相关页面设置Cache-Control头信息,dns及cdn目录配置10天
+2
+3    if ($request_uri ~* "^/$|^/dns/.+/|^/cdn/.+/") {
+4      add_header    Cache-Control  max-age=864000;
+5    }
+6
+7    if ($request_uri ~* "^/linux/|^/t/") {
+8      add_header    Cache-Control  max-age=86400;
+9    }
+```
+
+
+
 
 
 

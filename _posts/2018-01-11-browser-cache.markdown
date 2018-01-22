@@ -52,6 +52,16 @@ date: 2016-01-11 15:32:24.000000000 +09:00
 1. 浏览器第一次向服务器请求一个资源时，服务器在返回资源时会在response header加上 Last-modified这个header，表示这个资源在服务器上的最后修改时间;
 ![](http://images2015.cnblogs.com/blog/459873/201601/459873-20160115111438210-1551540589.png)
 
+2. 浏览器再次向服务器请求这个资源时，会在request header中加上 If-modified-since这个header，这个header的值就是上次请求返回的Last-modified的值。
+![](http://images2015.cnblogs.com/blog/459873/201601/459873-20160115125437460-1062702620.png)
+
+3. 服务器再次收到这个资源的请求时，根据浏览器传过来的 Last-Modified-Since和资源在服务器上的最后修改时间做对比，如果没有变化就返回 304 Not Modified，这是告诉浏览器去缓存中获取资源，服务器不会返回资源内容；如果有变化就正常返回资源内容。当服务器返回 304 Not Modified的相应时，response header 中不会再添加Last-Modified的header，因为既然资源没有改变，Last-modified也就不会改变。
+
+4. 如果协商缓存没有命中，浏览器需要直接从服务器加载资源，这时服务器 response header中会添加 Last-Modified的header，相应的，浏览器会记录 Last-Modified的值，下次请求时 If-Modified-Since会返回最新获取的 Last-Modified的值。
+
+### 【ETag、If-None-Match】 header的使用
+【Last-Modified，If-Modified-Since】都是根据服务器时间返回的header，一般来说，在没有调整服务器时间和篡改客户端缓存的情况下，这两个header配合起来管理协商缓存是非常可靠的，但是有时候也会服务器上资源其实有变化，但是最后修改时间却没有变化的情况，而这种问题又很不容易被定位出来，而当这种情况出现的时候，就会影响协商缓存的可靠性。所以就有了另外一对header来管理协商缓存，这对header就是【ETag、If-None-Match】。它们的缓存管理的方式是：
+
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 浏览器缓存小结
+title: Browser Cache
 date: 2018-01-22 22:10:30
 ---
 ## 缓存分类

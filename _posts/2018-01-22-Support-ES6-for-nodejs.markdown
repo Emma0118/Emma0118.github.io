@@ -15,4 +15,6 @@ es-checker
 ```
 可以查看当前版本的Node.js对ES6的支持情况
 ![](/assets/images/es6-1.png)
+![](/assets/images/es6-2.png)
+![](/assets/images/es6-3.png)
 

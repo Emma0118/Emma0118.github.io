@@ -20,3 +20,22 @@ es-checker
 ![](/assets/images/es6-2.png)
 ![](/assets/images/es6-3.png)
 
+#### 添加ES6支持
+
+1. npm init 初始化工程目录，生成package.json文件
+2. 全局安装 Babel-cli npm install babel-cli -g
+3. 安装babel-preset-es2015来支持ES6的语法
+```bash
+npm install babel-preset-es2015 --save
+```
+4. 增加 .babelrc配置文件
+```bash
+{
+    "presets": [
+        "es2015"
+    ],
+    "plugins": []
+}
+```
+
+

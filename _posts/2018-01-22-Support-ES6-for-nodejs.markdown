@@ -3,8 +3,8 @@ layout: post
 title: 如何使Node.js支持 ES6
 date: 2018-01-23 18:33:00
 ---
->
->
+
+
 
 #### 检测当前 Node.js版本对ES6的支持情况
 1. 全局安装检测工具

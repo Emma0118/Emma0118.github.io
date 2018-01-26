@@ -9,6 +9,7 @@ date: 2018-01-24 22:27:30
 
 2. vue init nuxt
  参考   https://juejin.im/post/59e018dbf265da4309442b4e
+ 参考 gitHub vueblog
 
 
 

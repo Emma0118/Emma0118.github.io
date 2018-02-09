@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6de0e2d-4450-4f5f-9b9a-9c86807e4564" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Directory.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Root.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/virtualHost.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/2018-02-24-Nuxt.js.markdown" afterPath="$PROJECT_DIR$/_posts/2018-02-09-WAMP.markdown" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -290,7 +286,7 @@
       <workItem from="1516626159102" duration="4581000" />
       <workItem from="1516657922402" duration="599000" />
       <workItem from="1516803819167" duration="306000" />
-      <workItem from="1518170848316" duration="2235000" />
+      <workItem from="1518170848316" duration="2242000" />
     </task>
     <task id="LOCAL-00001" summary="修改为md">
       <created>1515662313537</created>
@@ -390,11 +386,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516974243011</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="完结">
+      <created>1518173089157</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1518173089157</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50580000" />
+    <option name="totallyTimeSpent" value="50587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />

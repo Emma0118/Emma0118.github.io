@@ -286,7 +286,7 @@
       <workItem from="1516626159102" duration="4581000" />
       <workItem from="1516657922402" duration="599000" />
       <workItem from="1516803819167" duration="306000" />
-      <workItem from="1518170848316" duration="2242000" />
+      <workItem from="1518170848316" duration="2326000" />
     </task>
     <task id="LOCAL-00001" summary="修改为md">
       <created>1515662313537</created>
@@ -393,11 +393,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518173089157</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="wamp安装记录">
+      <created>1518173115647</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1518173115647</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50587000" />
+    <option name="totallyTimeSpent" value="50671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -477,7 +484,8 @@
     <MESSAGE value="增加 强缓存管理" />
     <MESSAGE value="增加 协商缓存" />
     <MESSAGE value="完结" />
-    <option name="LAST_COMMIT_MESSAGE" value="完结" />
+    <MESSAGE value="wamp安装记录" />
+    <option name="LAST_COMMIT_MESSAGE" value="wamp安装记录" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

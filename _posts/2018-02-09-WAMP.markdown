@@ -1,0 +1,24 @@
+---
+layout: post
+title: WAMP
+date: 2018-02-09 18:20:30
+---
+
+#### 安装与部署
+1.网上下载  Wamp Server
+2.选择安装路径，安装在了D盘
+3.一路next直到安装成功
+4.使用 http://localhost/测试默认伺服页面
+5.打开wamp安装路径下bin -> apache -> conf文件夹
+6.修改http.conf 将测服目录修改为自己的目录
+
+![](/assets/images/Directory.png)
+![](/assets/images/Root.png)
+
+7.进入conf文件加下的extra,修改httpd-vhosts.conf
+设置响应的需要设置的端口和域名等，每个设置对应一个VirtualHost block
+![](/assets/images/virtualHost.png)
+
+
+
+

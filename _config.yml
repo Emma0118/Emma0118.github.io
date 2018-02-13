@@ -37,13 +37,13 @@ comment:
 
 # Social
 #social:
-    weibo: onevcat
-    github: onevcat
-    twitter: onevcat
-    gplus: 107108267983477358170
-    mail: onev@onevcat.com
+    #weibo: onevcat
+    #github: onevcat
+    #twitter: onevcat
+    #gplus: 107108267983477358170
+    #mail: onev@onevcat.com
 
 # Google Analytics
-ga:
+#ga:
     # id: your_ga_id
     # host: your_host

@@ -12,12 +12,14 @@ date: 2017-11-09 07:33:00
  React 生态提供了很多选择方案，这里我们选用 Redux 和 react-router 来做说明。
 
  ### 2 分钟了解 Redux 是如何运作的
+
  1.Store
  整个应用只有一个唯一的 Store
  Store 对应的状态树（State），由调用一个 reducer 函数（root reducer）生成
  状态树上的每个字段都可以进一步由不同的 reducer 函数生成
  Store 包含了几个方法比如 dispatch, getState 来处理数据流
  Store 的状态树只能由 dispatch(action) 来触发更改
+
  2.  Redux 的数据流：
  action 是一个包含 { type, payload } 的对象
  reducer 函数通过 store.dispatch(action) 触发
@@ -26,7 +28,8 @@ date: 2017-11-09 07:33:00
 
   所以对于整个应用来说，一个 Store 就对应一个 UI快照，服务器端渲染就简化成了在服务器端初始化 Store，将      Store 传入应用的根组件，针对根组件调用 renderToString 就将整个应用输出成包含了初始化数据的 HTML。
 
-  ###react-router
+  ### react-router
+
   react-router 通过一种声明式的方式匹配不同路由决定在页面上展示不同的组件，并且通过props 将路由信息传递给组件使用，所以只要路由变更，props 就会变化，触发组件 re-render。
 
   假设有一个很简单的应用，只有两个页面，一个列表页 /list 和一个详情页 /item/:id，点击列表上的条目进入详情页。
@@ -91,7 +94,8 @@ export default functionlistReducer(state = initialState, action) {
 ```
 list 就是一个包含 items 的简单数组，可能类似这种结构：[{ id: 0, name:'first item'}, {id: 1, name: 'second item'}]，从 'FETCH_LIST_SUCCESS' 的action.payload 获得。
 
-###Action
+### Action
+
 对应的应该要有两个 action 来获取 list 和 item，触发 reducer 更改Store，这里我们定义 fetchList 和fetchItem 两个 action。
 
 ```bash
@@ -134,7 +138,8 @@ export default functionconfigureStore(initialState) {
 
 
 
-###react-redux
+### react-redux
+
 接下来实现 <List>，<Item> 组件，然后把 redux 和 react 组件关联起来
 app.js
 ```bash
@@ -165,7 +170,7 @@ render(<Root />,document.getElementById('root'));
 ```
 至此，客户端部分结束。
 
-###Server Rendering
+### Server Rendering
 
 接下来的服务器端就比较简单了，获取数据可以调用 action，routes 在服务器端的处理参考 react-router server rendering，在服务器端用一个 match 方法将拿到的request url 匹配到我们之前定义的 routes，解析成和客户端一致的 props 对象传递给组件。
 

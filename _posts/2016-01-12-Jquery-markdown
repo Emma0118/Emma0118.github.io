@@ -1,0 +1,33 @@
+---
+layout: post
+title: 常用的Juery插件
+date: 2016-01-12 11:00:00
+---
+
+插件（Plugin)又称扩展（Extension），是一种遵循一定规范的应用程序接口编写出来的程序。
+
+jQuery的易扩展性，吸引了来自全球的开发者来共同编写jQuery插件，目前已经有超过几百种插件因公在全球不同类型的项目上，使用这些经过无数人检验和完善的优秀插件，可以帮助用户开发出稳定的应用系统节约项目成本。
+
+
+
+
+
+常用插件一：Validation用于进行表单校验；
+
+常用插件二：Form
+
+是一个优秀的Ajax表单插件，可以非常容易的、无侵入的升级HTML表单以支持Ajax。jQuery Form有两个核心方法——ajaxForm（）和ajaxsubmit()，它们集合了从控制表单元素到决定如何管理提交进程的功能，另外，插件还包括其他的一些方法：formToArray()、formSerialize（）、fieldSerialize（）、fieldValue（）、clearForm（）、clearFields（）和resetForm()等。
+
+常用插件三：jQuery UI插件
+
+
+
+常用插件四：Cookie
+
+cookie文件管理
+
+常用插件五：livequery
+
+用于动态绑定事件
+
+还可以自定义插件；

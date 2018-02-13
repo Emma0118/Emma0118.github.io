@@ -1,0 +1,311 @@
+---
+layout: post
+title: Ajax in Jquery
+date: 2017-01-05 23:13:00
+---
+
+一、
+
+1、JSX：即JavaScript XML——一种在React组建内部构建标签的类XML语法。（增强React程序组件的可读性）；
+
+2、使用动态值：
+
+JSX将两个花括号：{}渲染成动态值，花括号指明了一个JavaScript上下文环境——或括号内的任何东西都会进行求值，得到的结果会被渲染为标签中的若干节点。
+
+对于简单值，比如文本或者数字，你可以直接引用对应的变量，例如：
+
+var text=‘Questions’；
+
+<h2>{text}</h2>
+
+对于更复杂的逻辑，可以更倾向于将其转换成一个函数来求值,例如：
+
+function（）dateToString（d）{
+
+return【
+
+d.getFullYear();
+
+d.getMonth()+1;
+
+d.getDate()
+
+].join('-');
+
+
+
+}；
+
+<h2>{dateToString(newDate())}</h2>
+
+
+
+React通过数组中的每个元素渲染为一个节点的方式对数组进行自动求值：
+
+var text=[‘hello','hello'];
+
+<h2>{text}</h2>
+
+//<h2>helloworld</h2>
+
+
+
+3、子节点
+
+比起简单的值，我们通常希望渲染一些更复杂的数据，比如说，可以把数组中的所有数据渲染成若干个<li>元素，就要涉及到子节点了：
+
+var Divider =React.createClass（{
+
+render：function（）｛
+
+return（
+
+<div className="divider">
+
+<h2>{this.props.children}<h2>
+
+</div>
+
+）
+
+}
+
+}）；
+
+<Divider>Questions</Divider>
+
+React将开始标签和结束标签中所有的子节点保存在一个名为this.props.children的组件属性中。而以上例子中this.props.children==["Questions"];
+
+
+
+4、JSX与HTML比较
+
+1)属性设置
+
+var surveyQuestionId =this.props.id;
+
+var classes ="some-class-name";
+
+...
+
+<div id = {surveyQuestionId}className={classes}>...</div>
+
+
+
+对于属性的设置和HTML很相似，注意设置class的方式不是class而是className；对于更复杂的情景可以把属性设置为一个函数调用返回的结果；
+
+<divid={this.getSurveyId()}>...</div>
+
+
+
+React每渲染一个组件时，知道哪个的变量和函数会被求值，而总重生成的DOM结构反映出这个新的状态。
+
+
+
+2）条件判断
+
+在React中组件的HTML标签和生成这些标签的代码内在的紧密联系在一起，这意味着可以利用JavaScript强大的功能，例如循环和条件判断。
+
+要是在组件中添加条件判断似乎是很困难的事情，因为if/else逻辑很难用HMTL标签来表达。直接往JSX中加入if语句会渲染出无效的JavaScript。
+
+解决办法：
+
+使用三目运算符，设置一个变量并在属性中引用它，将逻辑转化到函数中，使用$$运算符，以下演示：
+
+使用三目运算符：
+
+render：function（）{
+
+return <divclassName={
+
+this.state.isComplete ?'is-complete'：‘‘
+
+}>...</div>
+
+}
+
+虽然对于文本来说三目运算符可以正常运行，但是如果想要在其他情况下很好地应用ReactComponent,三目运算符就可能显得笨重又麻烦了。对于这些情况最好使用以下方法：
+
+使用变量：
+
+getIsComplete:function(){
+
+return this.state.isComplete ?'is-complete' :  ' ';
+
+},
+
+render:function(){
+
+var isComplete= this.getIsComplete();
+
+return <divclassName={isComplete}>...</div>
+
+}
+
+
+
+使用函数：
+
+getIsComplete:function(){
+
+return this.state.isComplete ?'is-complete' :  ' ';
+
+},
+
+render:function(){
+
+
+
+return <div className={this.getISComplete()}>...</div>
+
+}
+
+使用逻辑与（&&）运算符
+
+由于对于null或者false值React不会输出任何内容，因此你可以使用一个后面跟随了期望字符串的布尔值来实现条件判断。如果这个布尔值是true，那么后续的字符串就会被使用。
+
+render：function（）{
+
+return  <divclassName={this.stae.isComplete && 'is-complete'}></div>
+
+}
+
+
+
+5、非DOM属性
+
+1）下面的特殊属性只有在JSX中存在：key、ref、dangerouslySetInnerHTML
+
+
+
+键（key）：
+
+可以是一个可选的唯一标识符。在程序运行的过程中，一个组件可能会在组件树中调整位置，比如当前用户在进行所有操作时，或者当一个列表中的物品被增加、删除时。这种情况下组件可能不需要被销毁并重新创建。
+
+通过给组件设置唯一的key。确保渲染周期内保持一致，使React能够更智能的决定应该重用一个组件，还是销毁并重新创建一个组件，今儿提升渲染的性能，当两个已经存在DoM中的组建交换位置时，可以不用重新渲染DOM而是移动。
+
+
+
+引用（ref）：
+
+ref允许负父组件在render方法之外保持对子组件的一个引用。
+
+在jSX中，可以通过属性中设置期望的引用名定义一个引用。例如：
+
+render：function（）{
+
+return  <div><input ref='myInput'.../></dib>
+
+}
+
+然后，你就可以在组件中的任何地方使用this.refs.myInput获取这个引用了。通过或者这个对象呗成为支持实例。并不是真的DOM，而是REact在需要的是有用来穿件DOM的一个描述对象。可以使用this.refs.myInput.getDOMNode()访问真实的DOM节点。
+
+
+
+设置原始的HTML：
+
+dangerouslySetInnerHTML——有时候需要将HTML内容设置为字符串，尤其是使用通过字符串操作DOM的第三方库时，为了提升React的互操作性，这个属性允许你使用HTML字符串，然而如果你可以避免使用的话那就尽量不要使用。要使用这个作用要把字符串设置到逐渐为html_的对象里，像这样：
+
+render：function（）{
+
+       var htmlString={
+
+ _html:"<span>an htmlstring</span>“
+
+}；
+
+return <div dangerouslySetInnerHTML={htmString}</div>
+
+
+
+}
+
+
+
+6、事件
+
+1）在所有浏览器中，时间名已经被规范化并同意用驼峰形式表示。例如，change变成了onChange，click变成了onClick，在JSX中，捕获一个事件就像是给组件的方法设置一个属性一样简单。
+
+
+
+handleClick：funcition(event){............},
+
+render:function(){
+
+rerurn <divonClick={this.handleClick}>...</div>
+
+}
+
+...
+
+注意，React自动绑定了组建所有方法的作用域，因此你永远都不需要手动绑定。
+
+
+
+handleClick:function（event）{.....}
+
+render:function(){
+      //反模式——在React中手动给组件实例绑定
+
+     //函数的作用域是没有必要的
+
+return   <div onClick ={this.handleClick.bind(this)}></div>
+
+}
+
+
+
+7、注释
+
+
+
+1）JSX本质上就是JavaScript，因此你可以在标签内添加原生的JavaScript注释，注释可以用以下两种方式添加：当作一个元素的子节点、内联在元素的属性中。
+
+
+
+2）做为子节点
+
+子节点形式的注释只需要简单的包裹在花括号内即可，并可以跨多行。
+
+例如：
+
+{/*内容。。。。。。*/}
+
+3)作为内联属性
+
+/*
+
+内容
+
+内容
+
+*/
+
+
+
+或者采用常用的 //来做单行注释
+
+
+
+4）特殊属性
+
+由于JSX会转化成原生的JavaScript函数因此有一些关键词我们不可以用的：如for和class
+
+要给表单里的变迁添加for属性需要使用htmlFor，要渲染一个自定义的class需要使用className。可以通过elem.className获取元素的class。
+
+
+
+8、样式
+
+React把内联样式规范化为了驼峰形式，与JavaScript中DOM的style属性一致。要添加自定义的样式属性，只需简单地把驼峰形式的属性名及期望的CSS值拼装为对象即可。
+
+var styles={
+
+borderColor：“#999",
+
+borderThickness：“1px”
+
+}；
+
+React的renderComponent(<div　style={styles}>．．．</div>，node）；
+

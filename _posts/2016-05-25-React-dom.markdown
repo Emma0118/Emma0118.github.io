@@ -1,0 +1,164 @@
+---
+layout: post
+title: React DOM 操作
+date: 2016-05-25 10:00:00
+---
+
+一、访问受控的DOM节点
+
+想要访问受React控制的DOM节点，首先必须能够访问到负责控制这些DOM的组件。这可以通过添加ref属性来实现。
+
+var DoodleArea = React.creatClass({
+
+rendre:funcitn(){
+     return <canvas ref="mainCanvas"/>
+
+}
+
+});
+
+
+
+可以通过this.refs.mainCanvas访问到<canvas>组件。可以使用this.refs.mainCanvas.getDOMNOde()方法反问底层的DOM节点，不要在render中这么做，因为render方法完成并且执行更新之前底层的DOM可能不是最新的。
+
+同样，知道组件被挂载你才能去调用getDOMNode（）方法，此时compontenDidMount事件处理器会被触发。
+
+例如：
+
+var DoodleArea = React.creatClass({
+
+
+
+render:function(){
+      this.getDOMNode();//此时调用会引起异常，因为组件还未挂载。
+
+      return <canvasref="mainCanvas" />
+
+},
+
+
+
+componentDidMount:function(){
+
+var canvasNode = this.refs.mainCanvas.getDOMNode()
+
+/ /此处是有效的，我们可以访问到节点，并可以调用painting方法
+
+}
+
+});
+
+PS：componentDidMount内部并不是getDOMNode()唯一的执行环境。事件处理器也可以在组件挂载后触发，所以可以在事件处理器中调用getDOMNode（）方法。
+
+如果可以使用其他方法实现就不要使用ref和getDOMNode（）的方法，这样会成为React性能优化上的障碍，并增加应用的复杂性，所以只有当常规的技术无法实现所需功能时才应该考虑他们。
+
+
+
+二、整合非React类库
+
+一些JavaScript类库没有使用React，一些类库不需要访问DOM,但如果徐娅哦使用他们，保持它们的状态和React的状态之间的同步是成功整合的关键，例如使用一个autocomplete类库。
+
+autocomplete（{
+
+target：document.getElementById("cities"),
+
+data:[
+
+"San Francisco",
+
+"St.Louis",
+
+"Amsterdam",
+
+"Los Angeles"
+
+],
+
+erents:{
+
+select:function(city){
+
+aletrt("You have selecte the city of "+city);
+
+}
+}
+}）；
+
+为了整合到React我们需要在componentDidMount处理其中实现连接。
+
+
+
+
+
+三、侵入式插件
+
+假如React引入了一个糟糕的插件，它修改了父元素，React无能为力，并且它与React不兼容，之时候最好的办法就是找另一个插件或者修改它的源码，面对这种侵入式的插件，保护好React的最佳方式就是把DOM操作的权利完全交给自己。例如：
+
+
+
+var SuperSelect =React.createClass({
+
+render:function(){
+   return ;
+
+}
+
+})'
+
+如上React会渲染上面的组件成一个单独的div，它没有子元素，也没有props。
+
+var SurSelect = React.createClass({
+        render:function(){
+                return;
+
+},
+
+componentDidMount:function(){
+
+var el = this.el =document.createElement('div');
+
+this.getDOMNode().appendChild(el);
+
+$(el).superSelect(this.props);
+
+$(el).on('superSelect',this.handleSuperSelectChange);
+
+},
+
+handleSuperSelectChange:function(){
+
+
+
+}
+
+});
+
+此时在组件渲染好的div内插入一个div，我们自己可以控制内层的div，这同样意味着我们有责任区完成清理工作。
+
+componentWillUnmount：funciton (){
+
+//从DOM中移除节点
+
+this.getDOMNode().removeChild(this.el);
+
+
+
+//移除superSelect上的所欲监视器
+
+$(this.el).off();
+
+}
+
+
+
+除了这样的清理工作，最好能够查阅插件的文档，检查是否友情里这些节点的额外需求，它可能设置了全聚德事件监听器、定时器或者初始Ajax请求，这些都选哟被清理掉。
+
+这里还需要一步操作，即处理更新。还可以通过两种方式触发：模拟卸载后重新挂载，或者使用插件更新操作API,前者更可靠，而后者则更高效、清晰。
+
+ 卸载重新/重新挂载方案的代码:
+componetDidUpdate:function(){
+     this.componentWillUnmount();
+
+    this.componentDidMount();
+
+}

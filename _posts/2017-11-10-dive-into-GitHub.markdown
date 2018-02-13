@@ -22,7 +22,7 @@ BOXEN是GitHub的自动化工具，设置和配置的Mac笔记本电脑软件开
 BOXEN的基础上收集了大量的几十个木偶模块，使设置的各种软件，如卡桑德拉，MongoDB中，Java软件中，Python和Ruby开发中，节点，JS，nginx的，Skype公司，甚至MINECRAFT。虽然机器上配备了一个预配置，每个用户
 可以调整它的配置应有的作用。
 
-###如何使用
+### 如何使用
 1.注册账户以及创建仓库
 
 要想使用github第一步当然是注册github账号了。之后就可以创建仓库了（免费用户只能建公共仓库），Create a New Repository，填好名称后Create，之后会出现一些仓库的配置信息，这也是一个git的简单教程。

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 深入理解Vue响应式原理
+title: React服务端渲染
 date: 2017-11-09 07:33:00
 ---
  React 提供了两个方法 renderToString 和 renderToStaticMarkup 用来将组件（Virtual DOM）输出成  HTML 字符串，这是 React服务器端渲染的基础，它移除了服务器端对于浏览器环境的依赖，所以让服务器  端渲染变成了一件有吸引力的事情。

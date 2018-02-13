@@ -12,7 +12,7 @@ GitHub可以托管各种git库，并提供一个web界面，但与其它像 Sour
 GitHub 使用 git 分布式版本控制系统，而 git 最初是 Linus Torvalds 为帮助Linux开发而创造的，它针对的是 Linux 平台，因此 git 和 Windows 从来不是最好的朋友，因为它一点也不像 Windows。GitHub
 发布了GitHub for Windows，为 Windows 平台开发者提供了一个易于使用的 Git 图形客户端。
 
-###GitHub For Windows
+### GitHub For Windows
 GitHub for Windows 是一个 Metro 风格应用程序，集成了自包含版本的 Git，bash 命令行 shell，PowerShell 的 posh-git 扩展。GitHub 为 Windows 用户提供了一个基本的图形前端去处理大部分常用版本控制任务，可以创建版本库，向本地版本库递交补丁，在本地和远程版本库之间同步。微软也通过CodePlex向开发者提供 git 版本控制系统，而 GitHub 创造了一个更具有吸引力的 Windows 版本。
 
 GitHub上已自动配置的Mac笔记本电脑，一个工具，可以转换设置Linux或Windows机器。
@@ -23,6 +23,7 @@ BOXEN的基础上收集了大量的几十个木偶模块，使设置的各种软
 可以调整它的配置应有的作用。
 
 ### 如何使用
+
 1.注册账户以及创建仓库
 
 要想使用github第一步当然是注册github账号了。之后就可以创建仓库了（免费用户只能建公共仓库），Create a New Repository，填好名称后Create，之后会出现一些仓库的配置信息，这也是一个git的简单教程。

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GitHub使用总结
-date: 2017-11-10 12:00:00
+date: 2015-11-10 12:00:00
 ---
 
 Git是一个分布式的版本控制系统，最初由Linus Torvalds编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。目前，包括Rubinius和Merb在内的很多知名项目都使用了Git。Git同样可以被诸如Capistrano和Vlad the Deployer这样的部署工具所使用。同样，eoe.cn客户端的源码也托管在github上。

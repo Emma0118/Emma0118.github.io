@@ -1,23 +1,28 @@
 ---
 layout: post
-title: React服务端渲染
+title: React服务端渲染及实现原理
 date: 2017-11-09 07:33:00
 ---
- React 提供了两个方法 renderToString 和 renderToStaticMarkup 用来将组件（Virtual DOM）输出成  HTML 字符串，这是 React服务器端渲染的基础，它移除了服务器端对于浏览器环境的依赖，所以让服务器  端渲染变成了一件有吸引力的事情。
+React 提供了两个方法 renderToString 和 renderToStaticMarkup 用来将组件（Virtual DOM）输出成  HTML 字符串，这是 React服务器端渲染的基础，它移除了服务器端对于浏览器环境的依赖，所以让服务器  端渲染变成了一件有吸引力的事情。
 
-服务器端渲染除了要解决对浏览器环境的依赖，还要解决两个问题：
+首先，服务器端渲染除了要解决对浏览器环境的依赖，还要解决两个问题：
+
 1.前后端可以共享代码
+
 2.前后端路由可以统一处理
 
- React 生态提供了很多选择方案，这里我们选用 Redux 和 react-router 来做说明。
+React 生态提供了很多选择方案，这里我们选用 Redux 和 react-router 来做说明。
 
- ### 2 分钟了解 Redux 是如何运作的
+### 2 分钟了解 Redux 是如何运作的
 
  1.Store
+ 
  整个应用只有一个唯一的 Store
- Store 对应的状态树（State），由调用一个 reducer 函数（root reducer）生成
- 状态树上的每个字段都可以进一步由不同的 reducer 函数生成
+ 
+ Store 对应的状态树（State），由调用一个 reducer 函数（root reducer）生成状态树上的每个字段都可以进一步由不同的 reducer 函数生成
+ 
  Store 包含了几个方法比如 dispatch, getState 来处理数据流
+ 
  Store 的状态树只能由 dispatch(action) 来触发更改
 
  2.  Redux 的数据流：
@@ -28,7 +33,7 @@ date: 2017-11-09 07:33:00
 
   所以对于整个应用来说，一个 Store 就对应一个 UI快照，服务器端渲染就简化成了在服务器端初始化 Store，将      Store 传入应用的根组件，针对根组件调用 renderToString 就将整个应用输出成包含了初始化数据的 HTML。
 
-  ### react-router
+### react-router
 
   react-router 通过一种声明式的方式匹配不同路由决定在页面上展示不同的组件，并且通过props 将路由信息传递给组件使用，所以只要路由变更，props 就会变化，触发组件 re-render。
 
@@ -62,7 +67,7 @@ date: 2017-11-09 07:33:00
   export default routes;
   ```
 
-  ### Reducer
+ ### Reducer
   ```bash
   import listReducer from './list';
   import itemReducer from './item';
@@ -121,7 +126,9 @@ export functionfetchItem(id) {
 isomorphic-fetch 是一个前后端通用的Ajax 实现，前后端要共享代码这点很重要。
 
 另外因为涉及到异步请求，这里的 action 用到了 thunk，也就是函数，redux 通过 thunk-middleware 来处理这类 action，把函数当作普通的 action dispatch就好了，比如 dispatch(fetchList())
+
 ###Store
+
 我们用一个独立的 ./store.js，配置（比如Apply Middleware）生成 Store
 ```bash
 import { createStore } from 'redux';

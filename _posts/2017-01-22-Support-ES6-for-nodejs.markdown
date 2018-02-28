@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何使Node.js支持 ES6
-date: 2018-01-23 18:33:00
+date: 2017-01-23 18:33:00
 ---
 
 

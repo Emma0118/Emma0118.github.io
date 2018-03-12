@@ -499,13 +499,13 @@ testTime(); // 0.173ms;
 
   # 参考文档
 
-  * [](https://zh.wikipedia.org/wiki/排序算法)
-  * [](https://zh.wikipedia.org/wiki/Google_Chrome#.E7.99.BC.E5.B8.83)
-  * [](https://github.com/v8/v8/blob/master/src/js/array.js)
-  * [](https://bugs.chromium.org/p/v8/issues/detail?id=90)
-  * [](https://bugzilla.mozilla.org/show_bug.cgi?id=224128)
-  * [](https://bugzilla.mozilla.org/show_bug.cgi?id=715181)
-  * [](https://mail.mozilla.org/pipermail/es-discuss/2013-June/031276.html)
-  * [](https://github.com/Microsoft/ChakraCore/blob/master/lib/Common/DataStructures/quicksort.h)
-  * [](http://gs.statcounter.com/#browser-ww-monthly-200809-200809-bar)
-  * [](http://ofb.net/~sethml/is-sort-stable.html)
+  * [https://zh.wikipedia.org/wiki/排序算法](https://zh.wikipedia.org/wiki/排序算法)
+  * [https://zh.wikipedia.org/wiki/Google_Chrome#.E7.99.BC.E5.B8.83](https://zh.wikipedia.org/wiki/Google_Chrome#.E7.99.BC.E5.B8.83)
+  * [https://github.com/v8/v8/blob/master/src/js/array.js](https://github.com/v8/v8/blob/master/src/js/array.js)
+  * [https://bugs.chromium.org/p/v8/issues/detail?id=90](https://bugs.chromium.org/p/v8/issues/detail?id=90)
+  * [https://bugzilla.mozilla.org/show_bug.cgi?id=224128](https://bugzilla.mozilla.org/show_bug.cgi?id=224128)
+  * [https://bugzilla.mozilla.org/show_bug.cgi?id=715181](https://bugzilla.mozilla.org/show_bug.cgi?id=715181)
+  * [https://mail.mozilla.org/pipermail/es-discuss/2013-June/031276.html](https://mail.mozilla.org/pipermail/es-discuss/2013-June/031276.html)
+  * [https://github.com/Microsoft/ChakraCore/blob/master/lib/Common/DataStructures/quicksort.h](https://github.com/Microsoft/ChakraCore/blob/master/lib/Common/DataStructures/quicksort.h)
+  * [http://gs.statcounter.com/#browser-ww-monthly-200809-200809-bar](http://gs.statcounter.com/#browser-ww-monthly-200809-200809-bar)
+  * [http://ofb.net/~sethml/is-sort-stable.html](http://ofb.net/~sethml/is-sort-stable.html)

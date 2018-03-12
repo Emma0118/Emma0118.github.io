@@ -494,7 +494,7 @@ testTime(); // 0.173ms;
 事实上，每种算法都有自己的优势和缺点，我们要做的是充分分析需求采取最合适的算法，这在复杂多变的前端尤其重要。比如，在对于稳定性要求高的排序中，采用不稳定算法实现的排序结果往往不尽相同，而对于内存、性能要求高的环境中，我们则更倾向于选择空间复杂度低的算法~~
 
 
-##  **  参考文档 **
+##  <strong> 参考文档  </strong>
 
   * [https://zh.wikipedia.org/wiki/排序算法](https://zh.wikipedia.org/wiki/排序算法)
   * [https://zh.wikipedia.org/wiki/Google_Chrome#.E7.99.BC.E5.B8.83](https://zh.wikipedia.org/wiki/Google_Chrome#.E7.99.BC.E5.B8.83)

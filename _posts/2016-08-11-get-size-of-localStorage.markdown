@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 获取localStorage大小另外的一种实现
-date: 2018-08-11 12:05:00
+date: 2016-08-11 12:05:00
 ---
 
 

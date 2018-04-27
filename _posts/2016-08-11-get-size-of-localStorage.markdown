@@ -15,21 +15,21 @@ date: 2016-08-11 12:05:00
 三、代码实现如下
 
 
-``bash
+```bash
 (function() {
     if(!window.localStorage) {
     console.log('当前浏览器不支持localStorage!')
     }    
     var test = '0123456789';
-    var add = function(num) {
-      num += num;
-      if(num.length == 10240) {
-        test = num;
-        return;
-      }
-      add(num);
-    }
-    add(test);
+    // var add = function(num) {
+       //     num += num;
+       //     if(num.length == 10240) {
+       //         test = num;
+       //         return;
+       //     }
+       //     add(num);
+       // }
+       // add(test);
     var sum = test;
     var show = setInterval(function(){
        sum += test;
@@ -43,5 +43,5 @@ date: 2016-08-11 12:05:00
        }
     }, 0.1)
   })()
-``
+```
 
